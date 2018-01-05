@@ -1,0 +1,2 @@
+Warning[2064] C:\firmware\70M_L_upconverter_SXY\70M_1223\work\App\WebUI\HTTPPrint.c 899 : static function 'HTTPPostConfig' not defined
+Warning[2064] C:\firmware\70M_L_upconverter_SXY\70M_1223\work\App\WebUI\HTTPPrint.c 899 : static function 'HTTPPostlut' not defined
