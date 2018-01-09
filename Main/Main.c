@@ -391,6 +391,9 @@ void main(void)
     }
 }
 
+
+
+
 void UpdateData(void)
 {
 	UpdateDataModuleSys();	//update data between i2c modules and system
@@ -399,13 +402,8 @@ void UpdateData(void)
 	UpdateDataLEDSys();		//update data from system to front panel LED display status
 }
 
-void UpdateDataModuleSys(void)
-{
-}
 
-void UpdateDataMenuSys()
-{
-}
+
 
 void UpdateDataUartSys()
 {
@@ -415,6 +413,4 @@ void UpdateDataLEDSys()
 {
 }
 
-void UpdateStatus(void)
-{
-}
+

@@ -16,6 +16,10 @@ unsigned char EditMode = FALSE, EditPosition = 0;
 char LCDPrintBuffer[2][nLCDLEN];
 	const char zeros[]={"0000000000"};
 
+	BYTE RefreshFlag = FALSE; //Page change, update whole Menu
+BYTE EditUpdateFlag = FALSE;//Edit position char update only
+BYTE ValueUpdateFlag = FALSE; //Content Value Update only
+
 typedef struct{
 	char MenuTitle[18];
 	char MenuTitleShort[12];
@@ -83,6 +87,706 @@ tMenuValue MenuValue[MENUCOUNT]=
 /*12*/	{0,0,0,0,0,0,0,0},
 /*13*/	{0,0,0,0,0,0,0,0},
 };
+
+
+
+char readflag = 0x00;
+
+static BYTE SYS__u8UpdateUpConverter()
+{
+ 	DWORD tempDWORD = 0;
+	WORD tempWORD = 0;
+	BYTE u8TempByte = 0; 
+	BOOL boReturn = FALSE;
+	float fAtten;
+	float fSetPwr;
+    
+	stI2CUCMsg.u8CtrlStatus &= nI2C_READ;
+	
+	I2C_Send(I2C_UPCVT_ADDR, (char*)&readflag, 1); //Notify Want to read I2C message by sending null
+	boReturn = I2C_Read(I2C_UPCVT_ADDR, (char*)&stI2CUCMsg, sizeof(tstI2CMsg)); //Read I2C message
+	if(!boReturn)
+		return FALSE;
+    
+	if (((stI2CUCMsg.u8CtrlStatus & nLOCK )== 0) && (stConverter.UpCVT.u8AlarmStatus != 0))
+	{
+
+		stConverter.UpCVT.u8AlarmStatus = 0; //0 = alm
+		stConverter.UpCVT.u8Lock = 0;
+        /* If we are not at this menu now, we don't have to refresh now */
+		if(((CurrentMenu == nLOSTATUS_MENU_A) || (CurrentMenu == MENU0)) && (TRUE != EditMode) ) /* if edit is on going, don't refresh the new read values */
+        {
+            ValueUpdateFlag = TRUE;
+           // stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }
+
+
+	
+
+		Main_vLEDLO(OFF);
+           
+	}
+	else if (((stI2CUCMsg.u8CtrlStatus & nLOCK)!= 0) && (stConverter.UpCVT.u8AlarmStatus == 0))
+	{
+
+	    stConverter.UpCVT.u8AlarmStatus = 1;
+		stConverter.UpCVT.u8Lock = 1;
+        /* If we are not at this menu, we don't have to refresh now */
+		if(((CurrentMenu == nLOSTATUS_MENU_A)|| (CurrentMenu == MENU0)) && (TRUE != EditMode) )
+        {
+			ValueUpdateFlag = TRUE;
+           // stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }
+
+
+
+		if(stConverter.DownCVT.u8Lock == 1) //check the other cvt
+			Main_vLEDLO(ON);
+        
+	}
+
+
+	u8TempByte = (stI2CUCMsg.u8CtrlStatus & nAGC_OFF)?0:1;
+	//if(u8TempByte != stConverter.UpCVT.u8ALC)
+	{
+		stConverter.UpCVT.u8ALC= u8TempByte;
+
+
+
+		if(STATUS_OFF == stConverter.UpCVT.u8ALC)
+		{
+			strcpypgm2ram(sALCa,"OFF");
+		}
+		else
+		{
+			strcpypgm2ram(sALCa,"ON ");
+		}
+
+		/* If we are not at this menu now, we don't have to refresh now */
+		if((CurrentMenu == nALC_MENU_A)&& (TRUE != EditMode))
+		{
+            ValueUpdateFlag = TRUE;
+           // stMenuDisplay[nALC_MENU_A].pvfPrintMenu();
+        }
+        
+	}
+
+	u8TempByte = (stI2CUCMsg.u8CtrlStatus & nRX_ENABLE)?1:0; //0 = disabled, 1 = enabled
+	//if(u8TempByte != stConverter.UpCVT.u8Mute)
+	{
+		stConverter.UpCVT.u8Mute= u8TempByte;
+		
+
+
+		if(STATUS_OFF == stConverter.UpCVT.u8Mute)
+		{
+			strcpypgm2ram(sMutea,"DISABLED ");
+			Main_vLEDTX(OFF);
+		}
+		else
+		{
+			strcpypgm2ram(sMutea,"ENABLED ");
+			Main_vLEDTX(ON);
+		}
+       
+	   if((CurrentMenu == nMUTE_MENU_A)&& (TRUE != EditMode))
+	   {
+		   ValueUpdateFlag = TRUE;
+		  // stMenuDisplay[nMUTE_MENU_A].pvfPrintMenu();
+	   }
+
+	}	
+
+
+    tempDWORD = Util_u16DWORDSwap(stI2CUCMsg.unRfFreq.u32Freq);
+
+    if((tempDWORD != stConverter.UpCVT.u32OutputFreq)&&(tempDWORD <=MAXRFFREQ)&&(tempDWORD>=MINRFFREQ))
+    {
+        stConverter.UpCVT.u32OutputFreq = tempDWORD;
+		
+		sprintf(RFFreqString1,"%04ld.%03ldMHz",stConverter.UpCVT.u32OutputFreq/1000,stConverter.UpCVT.u32OutputFreq%1000 );	
+    
+        if(((CurrentMenu == nFREQ_MENU_A) || (CurrentMenu == MENU0)) && (TRUE != EditMode))
+        {
+            ValueUpdateFlag = TRUE;
+          //  stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }
+    }
+
+    
+    tempWORD = Util_u16ByteSwap(stI2CUCMsg.unAtten.u16Atten);
+
+	if (stConverter.UpCVT.u8ALC == STATUS_OFF) /* ALC OFF, read out Attn*/
+	{
+	    if ((tempWORD != stConverter.UpCVT.u16Atten)&&(tempWORD<= MAXATTEN)&&(tempWORD>= MINATTEN))
+	    {
+
+	        stConverter.UpCVT.u16Atten = tempWORD;
+	    
+			fAtten = stConverter.UpCVT.u16Atten /10.0f;
+			
+			sprintf(AttenString1,"%02d.%1d dB",(int)fAtten,(int)(fAtten*10) %10 );	
+
+			if((CurrentMenu == nATTN_MENU_A)&& (TRUE != EditMode))
+	        {
+	            ValueUpdateFlag = TRUE;
+	          //  stMenuDisplay[nATTN_MENU_A].pvfPrintMenu();
+	        }
+
+	    }
+	}
+	else /* ALC ON, read out Set Power*/
+	{
+	    if ((tempWORD != stConverter.UpCVT.u16SetPwr)&&(tempWORD<= MAXPOWER)&&(tempWORD>= MINPOWER))
+	    {
+
+	        stConverter.UpCVT.u16SetPwr = tempWORD;
+
+			fSetPwr = (stConverter.UpCVT.u16SetPwr -500)/10.0f;
+
+			stConverter.UpCVT.fSetPwr = fSetPwr;
+			
+			sprintf(sUPC_StPwr,"%+03d.%1d dBm",(int)fSetPwr,(int)(fSetPwr*10) %10 );	
+
+			if((CurrentMenu == nSTPWR_MENU_A)&& (TRUE != EditMode))
+	        {
+	            ValueUpdateFlag = TRUE;
+	         //   stMenuDisplay[nSTPWR_MENU_A].pvfPrintMenu();
+	        }
+
+	    }
+
+
+	}
+
+	
+
+
+
+	tempWORD = Util_u16ByteSwap(stI2CUCMsg.u16RdPower);
+	if(((tempWORD) != stConverter.UpCVT.u16OutputPower)&&(tempWORD<=MAXPOWER)&&(tempWORD>=MINPOWER))
+	{
+		stConverter.UpCVT.i16OutputPower = (SHORT)(tempWORD-500) / 10;
+		stConverter.UpCVT.u16OutputPower = tempWORD;
+		
+
+
+		sprintf(sUCPower,"%+03d dBm",stConverter.UpCVT.i16OutputPower);
+
+		if(((CurrentMenu == nPOWER_MENU_A)  || (CurrentMenu == MENU0))&& (TRUE != EditMode))
+        {
+			ValueUpdateFlag = TRUE;
+          //  stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }
+	}
+
+	return TRUE;
+          
+}
+
+static BYTE SYS__u8UpdateDownConverter()
+{
+ 	DWORD tempDWORD = 0;
+	WORD tempWORD = 0;
+	BYTE u8TempByte = 0;    
+	BOOL boReturn = FALSE;	
+	float fAtten;
+	float fSetPwr;
+    
+	stI2CDCMsg.u8CtrlStatus &= nI2C_READ;
+	
+	I2C_Send(I2C_DownCVT_ADDR, (char*)&readflag, 1);
+	
+	boReturn = I2C_Read(I2C_DownCVT_ADDR, (char*)&stI2CDCMsg, sizeof(tstI2CMsg));
+
+	if(!boReturn)
+		return FALSE;
+    
+    
+	if (((stI2CDCMsg.u8CtrlStatus & nLOCK)== 0)  && (stConverter.DownCVT.u8AlarmStatus != 0))
+	{
+
+		stConverter.DownCVT.u8AlarmStatus = 0;
+		stConverter.DownCVT.u8Lock = 0;
+
+		if(((CurrentMenu == nLOSTATUS_MENU_B)  || (CurrentMenu == MENU1)) && (TRUE != EditMode))
+		{
+            ValueUpdateFlag = TRUE;
+            //stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }
+
+		Main_vLEDLO(OFF);
+        
+	}
+	else if (((stI2CDCMsg.u8CtrlStatus & nLOCK)!= 0) && (stConverter.DownCVT.u8AlarmStatus == 0))
+	{
+
+        
+		stConverter.DownCVT.u8AlarmStatus = 1;
+		stConverter.DownCVT.u8Lock = 1;
+
+		if(((CurrentMenu == nLOSTATUS_MENU_B)  || (CurrentMenu == MENU1))&& (TRUE != EditMode))
+        {
+			ValueUpdateFlag = TRUE;
+             //stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }		
+
+		if(stConverter.UpCVT.u8Lock == 1)
+			Main_vLEDLO(ON);
+       
+	}
+
+
+	u8TempByte = (stI2CDCMsg.u8CtrlStatus & nAGC_OFF)?0:1; 
+	if(u8TempByte != stConverter.DownCVT.u8ALC)
+	{
+		stConverter.DownCVT.u8ALC= u8TempByte;
+
+
+
+		if(STATUS_OFF == stConverter.DownCVT.u8ALC)
+		{
+			strcpypgm2ram(sALCb,"OFF");
+		}
+		else
+		{
+			strcpypgm2ram(sALCb,"ON ");
+		}
+
+		if((CurrentMenu == nALC_MENU_B) && (TRUE != EditMode))
+        {
+			ValueUpdateFlag = TRUE;
+            //stMenuDisplay[nALC_MENU_B].pvfPrintMenu();
+        }
+        
+	}
+	u8TempByte = (stI2CDCMsg.u8CtrlStatus & nRX_ENABLE)?1:0;
+	if(u8TempByte != stConverter.DownCVT.u8Mute)
+	{
+		stConverter.DownCVT.u8Mute= u8TempByte;
+		
+
+
+		if(STATUS_OFF == stConverter.DownCVT.u8Mute)
+		{
+			strcpypgm2ram(sMuteb,"DISABLED");
+			Main_vLEDRX(OFF);
+		}
+		else
+		{
+			strcpypgm2ram(sMuteb,"ENABLED ");
+			Main_vLEDRX(ON);
+		}
+
+		if ((CurrentMenu == nMUTE_MENU_B) && (TRUE != EditMode))
+		{
+            ValueUpdateFlag = TRUE;
+            //stMenuDisplay[nMUTE_MENU_B].pvfPrintMenu();   
+        }
+
+	}	
+
+    
+    tempDWORD = Util_u16DWORDSwap(stI2CDCMsg.unRfFreq.u32Freq);
+
+
+    if ((tempDWORD != stConverter.DownCVT.u32InputFreq)&&(tempDWORD <=MAXRFFREQ)&&(tempDWORD>=MINRFFREQ))
+    {
+
+        
+        stConverter.DownCVT.u32InputFreq = tempDWORD;
+
+
+		sprintf(RFFreqString2,"%04ld.%03ldMHz",stConverter.DownCVT.u32InputFreq/1000,stConverter.DownCVT.u32InputFreq%1000 );	
+		
+        if(((CurrentMenu == nFREQ_MENU_B)  || (CurrentMenu == MENU1)) && (TRUE != EditMode))
+        {
+            ValueUpdateFlag = TRUE;
+             //stMenuDisplay[CurrentMenu].pvfPrintMenu();   
+        }
+
+          
+    }
+
+    
+    
+    tempWORD = Util_u16ByteSwap(stI2CDCMsg.unAtten.u16Atten);
+	if (stConverter.DownCVT.u8ALC == STATUS_OFF) /* ALC OFF, read out Attn*/
+	{
+
+		    if ((tempWORD != stConverter.DownCVT.u16Atten)&&(tempWORD<= MAXATTEN)&&(tempWORD>= MINATTEN))
+		    {
+
+		        stConverter.DownCVT.u16Atten = tempWORD;
+
+				fAtten = stConverter.DownCVT.u16Atten /10.0f;
+		    
+				sprintf(AttenString2,"%02d.%1d dB",(int)fAtten,(int)(fAtten*10) %10 );	
+				
+		        if((CurrentMenu == nATTN_MENU_B) && (TRUE != EditMode))
+		        {
+		            ValueUpdateFlag = TRUE;
+		            //stMenuDisplay[nATTN_MENU_B].pvfPrintMenu(); 
+		        }
+
+		                
+		    }
+	}
+
+	else /* ALC ON, read out Set Power*/
+	{
+	    if ((tempWORD != stConverter.DownCVT.u16SetPwr)&&(tempWORD<= MAXPOWER)&&(tempWORD>= MINPOWER))
+	    {
+
+	        stConverter.DownCVT.u16SetPwr = tempWORD;
+
+			fSetPwr = (stConverter.DownCVT.u16SetPwr -500)/10.0f;
+
+			stConverter.DownCVT.fSetPwr = fSetPwr;
+			
+			sprintf(sDNC_StPwr,"%+03d.%1d dBm",(int)fSetPwr,(int)(fSetPwr*10) %10 );	
+
+			if((CurrentMenu == nSTPWR_MENU_B)&& (TRUE != EditMode))
+	        {
+	            ValueUpdateFlag = TRUE;
+	            //stMenuDisplay[nSTPWR_MENU_B].pvfPrintMenu();
+	        }
+
+	    }
+
+	}
+	
+
+	
+	
+	tempWORD = Util_u16ByteSwap(stI2CUCMsg.u16RdPower);
+
+	if((tempWORD != stConverter.DownCVT.u16OutputPower)&&(tempWORD<=MAXPOWER)&&(tempWORD>=MINPOWER))
+	{
+		stConverter.DownCVT.i16OutputPower = (SHORT)(tempWORD-500) / 10;
+		stConverter.DownCVT.u16OutputPower = tempWORD;
+		
+
+
+
+        sprintf(sDCPower,"%+03d dBm",stConverter.DownCVT.i16OutputPower);
+
+		if(((CurrentMenu == nPOWER_MENU_B) || (CurrentMenu == MENU1))&& (TRUE != EditMode))
+        {
+			ValueUpdateFlag = TRUE;
+            //stMenuDisplay[CurrentMenu].pvfPrintMenu();
+        }
+
+	}    
+
+	return TRUE;
+}
+
+static BYTE SYS__u8UpdateVOL()
+{
+	BYTE u8TempByte = 0;
+	WORD u16TempWord = 0;
+	BOOL boReturn = FALSE;	
+    
+	stI2CREFMsg.u8Status &= nI2C_READ;
+	
+	I2C_Send(I2C_REF_ADDR, (char*)&readflag, 1);
+	boReturn = I2C_Read(I2C_REF_ADDR, (char*)&stI2CREFMsg, sizeof(tstI2CMsgVOL));
+
+	if(!boReturn)
+		return FALSE;
+    
+    
+    u8TempByte = stI2CREFMsg.u8Status & nLNB_DC_ON ? 1:0;
+    if(stConverter.stDC.u8LNB_DC_ONOFF!= u8TempByte )
+    {
+        stConverter.stDC.u8LNB_DC_ONOFF= u8TempByte;
+		if (STATUS_ON != stConverter.stDC.u8LNB_DC_ONOFF)
+		{
+			s18VDC[1] ='F';
+			s18VDC[2] ='F';
+		}
+		else
+		{
+			s18VDC[1] ='N';
+			s18VDC[2] =' ';
+
+		}
+	    
+		if(((CurrentMenu == nDC18V_MENU) || (CurrentMenu == MENU2)) && (TRUE != EditMode))
+	    {	ValueUpdateFlag = TRUE;
+	        //stMenuDisplay[CurrentMenu].pvfPrintMenu(); 
+	    }
+	         
+            
+    }
+
+   
+    
+    u8TempByte = stI2CREFMsg.u8Status & nBUC_DC_ON ? 1:0;
+	
+    if(stConverter.stDC.u8BUC_DC_ONOFF!= u8TempByte )
+    {
+        stConverter.stDC.u8BUC_DC_ONOFF= u8TempByte;
+
+		
+		if (STATUS_ON != stConverter.stDC.u8BUC_DC_ONOFF)
+		{
+			s24VDC[1] ='F';
+			s24VDC[2] ='F';
+		}
+		else
+		{
+			s24VDC[1] ='N';
+			s24VDC[2] =' ';
+		
+		}
+		
+		 if (((CurrentMenu == nDC24V_MENU) || (CurrentMenu == MENU2)) && (TRUE != EditMode))
+		 {
+			 ValueUpdateFlag = TRUE;
+		 
+			 //stMenuDisplay[CurrentMenu].pvfPrintMenu();  
+		 }
+		
+    } 
+
+
+
+	 u8TempByte = stI2CREFMsg.u8Status & nBUC_REF_ON ? 1:0;
+	 
+	 if(stConverter.stDC.u8BUC_REF_ONOFF!= u8TempByte )
+	 {
+		 stConverter.stDC.u8BUC_REF_ONOFF= u8TempByte;
+		if (STATUS_ON != stConverter.stDC.u8BUC_REF_ONOFF)
+		{
+			sBUCREF[1] ='F';
+			sBUCREF[2] ='F';
+		}
+		else
+		{
+			sBUCREF[1] ='N';
+			sBUCREF[2] =' ';
+		}
+
+
+		if ((CurrentMenu == nBUCREF_MENU) && (TRUE != EditMode))
+		{
+			ValueUpdateFlag = TRUE;
+
+			//stMenuDisplay[nBUCREF_MENU].pvfPrintMenu();	
+		}
+
+	 } 
+
+
+	 u8TempByte = stI2CREFMsg.u8Status & nLNB_REF_ON ? 1:0;
+	 
+	 if(stConverter.stDC.u8LNB_REF_ONOFF!= u8TempByte )
+	 {
+		 stConverter.stDC.u8LNB_REF_ONOFF= u8TempByte;
+
+		 if (STATUS_ON != stConverter.stDC.u8LNB_REF_ONOFF)
+		 {
+			 sLNBREF[1] ='F';
+			 sLNBREF[2] ='F';
+		 }
+		 else
+		 {
+			 sLNBREF[1] ='N';
+			 sLNBREF[2] =' ';
+		 }	
+
+		 if ((CurrentMenu == nLNBREF_MENU) && (TRUE != EditMode))
+		 {
+			 ValueUpdateFlag = TRUE;
+		 
+			 //stMenuDisplay[nLNBREF_MENU].pvfPrintMenu();	
+		 }	 
+	 		 
+		 
+
+	 } 
+
+
+	 u8TempByte = stI2CREFMsg.u8Status & nBUC_OVER_CURRENT ? 1:0;
+
+	 if(stConverter.stDC.u8BUC_DC_OVERCurrent != u8TempByte)
+	 {
+	 	stConverter.stDC.u8BUC_DC_OVERCurrent = u8TempByte;
+
+		if ((CurrentMenu == nBUCOVERI_MENU) && (TRUE != EditMode))
+		{
+		ValueUpdateFlag = TRUE;
+
+		//stMenuDisplay[CurrentMenu].pvfPrintMenu();  
+		}
+
+	 }
+
+	 u8TempByte = stI2CREFMsg.u8Status & nLNB_OVER_CURRENT ? 1:0;
+	 
+	if(stConverter.stDC.u8LNB_DC_OVERCurrent != u8TempByte)
+	{
+		stConverter.stDC.u8LNB_DC_OVERCurrent = u8TempByte;
+		
+		if ((CurrentMenu == nLNBOVERI_MENU) && (TRUE != EditMode))
+		{
+			ValueUpdateFlag = TRUE;
+
+			//stMenuDisplay[CurrentMenu].pvfPrintMenu();  
+		}
+
+	}
+
+	u8TempByte = stI2CREFMsg.u8Status & nEXT_REF ? 1:0;
+	  
+	if(stConverter.stDC.u8EXTREF != u8TempByte )
+	{
+		stConverter.stDC.u8EXTREF = u8TempByte;
+
+
+		if (((CurrentMenu == nEXTREF_MENU) || (CurrentMenu == MENU2)) && (TRUE != EditMode))
+		{
+		ValueUpdateFlag = TRUE;
+
+		//stMenuDisplay[CurrentMenu].pvfPrintMenu();  
+		}
+
+	}  
+
+	u16TempWord =  Util_u16ByteSwap(stI2CREFMsg.u16BUCCurrent);
+	if(u16TempWord != stConverter.stDC.u16BUCCurrent )
+	{
+		stConverter.stDC.u16BUCCurrent = u16TempWord;
+
+		if ((CurrentMenu == nBUCI_MENU) && (TRUE != EditMode))
+		{
+			ValueUpdateFlag = TRUE;
+
+			//stMenuDisplay[CurrentMenu].pvfPrintMenu();  
+		}
+	}
+
+
+	u16TempWord = Util_u16ByteSwap(stI2CREFMsg.u16LNBCurrent);
+	if(u16TempWord!= stConverter.stDC.u16LNBCurrent)
+	{
+		stConverter.stDC.u16LNBCurrent = u16TempWord;
+		if ((CurrentMenu == nLNBI_MENU) && (TRUE != EditMode))
+		{
+			ValueUpdateFlag = TRUE;
+
+			//stMenuDisplay[CurrentMenu].pvfPrintMenu();  
+		}		
+
+	}
+
+	u16TempWord =  Util_u16ByteSwap(stI2CREFMsg.u16BUCCurrentLimit);
+	if(u16TempWord!= stConverter.stDC.u16BUCCurrentLimit)
+	{
+		stConverter.stDC.u16BUCCurrentLimit=u16TempWord;
+
+	}
+
+
+	u16TempWord =  Util_u16ByteSwap(stI2CREFMsg.u16LNBCurrentLimit);
+	if(u16TempWord!= stConverter.stDC.u16LNBCurrentLimit)
+	{
+		stConverter.stDC.u16LNBCurrentLimit = u16TempWord;
+
+	}
+
+
+    return TRUE;
+    
+}
+
+/* ValueUpdateFlag will force refresh LCD. it must be rechecked whether current page is relavant or else, refresh is not required */
+/* Data strings should be re-organized */
+/* JuZh: should consider only send to one module per cycle, or else waiting time is too long */
+void UpdateStatus(void)
+{
+	static BYTE u8Index = 0;
+	
+
+	if(0 == u8Index)
+        /* Module Up Converter*/
+    	SYS__u8UpdateUpConverter();
+	
+	else if(1 == u8Index)
+		/* Module Down Converter*/
+		SYS__u8UpdateDownConverter();
+
+	else if(2 == u8Index)
+	    /* Module Dc Control*/
+	    SYS__u8UpdateVOL();
+
+	u8Index++;
+	
+	if(u8Index>=3)
+		u8Index = 0;
+
+}
+
+
+void UpdateDataModuleSys(void)
+{
+    
+    /* Send I2C reading cmds to modules to update status */
+    
+    	static BYTE u8Index = 0;
+	
+
+	if(0 == u8Index)
+        /* Module Up Converter*/
+    	SYS__u8UpdateUpConverter();
+	
+	else if(1 == u8Index)
+		/* Module Down Converter*/
+		SYS__u8UpdateDownConverter();
+
+	else if(2 == u8Index)
+	    /* Module Dc Control*/
+	    SYS__u8UpdateVOL();
+
+	u8Index++;
+	
+	if(u8Index>=3)
+		u8Index = 0;
+    
+}
+
+
+void UpdateDataMenuSys()
+{
+    
+    BYTE i;
+    for(i=0;i<MENUCOUNT;i++)
+    {
+        
+       if( MenuValue[i].UpdatedFromMenu == TRUE)
+       {
+           /* update values from LCD to system database */
+           
+           /* Send this setting to Modules via I2C */
+           
+       }
+       
+       if( MenuValue[i].ToBeUpdated == TRUE)
+       {
+           /* update values from system database to LCD */
+           
+           
+           /* Whether LCD page refresh is required */
+           
+       }
+       
+        
+    }    
+    
+}
+
 
 void KeyProcessing(void)
 {
