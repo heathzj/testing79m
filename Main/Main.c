@@ -379,6 +379,9 @@ void main(void)
             
             SYS__vStatusTask();
 
+			UpdateData();
+
+
             HTTP_vClearWebPassword();
 
         }
