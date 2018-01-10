@@ -768,6 +768,69 @@ void UpdateDataMenuSys()
        if( MenuValue[i].UpdatedFromMenu == TRUE)
        {
            /* update values from LCD to system database */
+           switch (i)
+           {
+              case  3: //freq
+                stConverter.DownCVT.u32InputFreq = MenuValue[i].Value;
+                stI2CDCMsg.unRfFreq.u32Freq = stConverter.DownCVT.u32InputFreq;
+                DownCvt_vSendI2C();
+                
+              break;
+              
+              case 4: //power
+                stConverter.DownCVT.u16SetPwr = MenuValue[i].Value;
+                stI2CDCMsg.unAtten.u16Atten = stConverter.DownCVT.u16SetPwr;
+                DownCvt_vSendI2C();
+              break;
+          
+              
+              case 7: //ATTN
+                stConverter.DownCVT.u16Atten = MenuValue[i].Value;
+                stI2CDCMsg.unAtten.u16Atten= stConverter.DownCVT.u16Atten;
+                DownCvt_vSendI2C();
+              break;
+              
+              case  8: //ALC
+                stConverter.DownCVT.u8ALC = MenuValue[i].Value;
+                if(stConverter.DownCVT.u8ALC==0)
+                {
+
+                    stI2CDCMsg.u8CtrlStatus |= nAGC_OFF;//0x02
+                }
+                else if(stConverter.DownCVT.u8ALC==1)
+                {
+                    stI2CDCMsg.u8CtrlStatus &= nAGC_ON;//0xFD	 
+                }	 
+	 
+                DownCvt_vSendI2C();
+                
+                
+              break;
+              
+              case 9: //RFONOFF
+                stConverter.DownCVT.u8Mute = MenuValue[i].Value;
+                 if(stConverter.DownCVT.u8Mute ==0) 
+                {
+                
+                    stI2CDCMsg.u8CtrlStatus  &= nRX_DISABLE;
+                    DownCvt_vSendI2C();
+                    Main_vLEDRX(stConverter.DownCVT.u8Mute );
+                }
+                 else if(stConverter.DownCVT.u8Mute ==1) 
+                {
+                   
+                    stI2CDCMsg.u8CtrlStatus |= nRX_ENABLE;
+                    DownCvt_vSendI2C();
+                    Main_vLEDRX(stConverter.DownCVT.u8Mute );
+                }	               
+                            
+                
+              break;
+               
+               
+           }
+           
+           MenuValue[i].UpdatedFromMenu = FALSE;
            
            /* Send this setting to Modules via I2C */
            
@@ -776,7 +839,41 @@ void UpdateDataMenuSys()
        if( MenuValue[i].ToBeUpdated == TRUE)
        {
            /* update values from system database to LCD */
-           
+          switch (i)
+           {
+               case  3: //freq
+                    MenuValue[i].Value = stConverter.DownCVT.u32InputFreq;
+               break;
+               
+               case  4: //power
+                     stConverter.DownCVT.u16SetPwr = MenuValue[i].Value;
+               break;
+               
+               case  5: //set pwr
+               
+               break;
+               
+               case  6: //lo
+               
+               break;   
+
+               case  7: //attn
+               
+               break;
+               
+               case  8: //alc
+               
+               break;
+               
+               case  9: //rfonoff
+               
+               break;
+               
+               case  10: //ref
+               
+               break;                 
+               
+           }
            
            /* Whether LCD page refresh is required */
            

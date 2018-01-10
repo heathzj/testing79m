@@ -94,7 +94,7 @@ AppConfig	D:\git\testing79m\Main\Main.c	83;"	v	line:83
 AppUtil_dword_swap	D:\git\testing79m\App\SNMP\SNMPLLiBUCDevInfo.c	19;"	f	line:19	signature:(DWORD val)
 AppUtil_dword_swap	D:\git\testing79m\App\Util\AppUtil.h	6;"	p	line:6	signature:(DWORD)
 AppUtil_validate_attenuation	D:\git\testing79m\App\Util\AppUtil.h	5;"	p	line:5	signature:(BUCinfo_t*)
-AppenSize	D:\git\testing79m\Singcom\Drivers\lcd.c	564;"	l	line:564
+AppenSize	D:\git\testing79m\Singcom\Drivers\lcd.c	1365;"	l	line:1365
 AttenString1	D:\git\testing79m\Main\Global.c	12;"	v	line:12
 AttenString2	D:\git\testing79m\Main\Global.c	13;"	v	line:13
 BASE_CRYPTOB_ADDR::(BASE_SSLB_ADDR+RESERVED_SSL_M	D:\git\testing79m\Microchip\Include\TCPIP Stack\MAC.h	133;"	d	line:133
@@ -313,15 +313,15 @@ BigIntSubtract	D:\git\testing79m\Microchip\Include\TCPIP Stack\BigInt.h	100;"	p	
 BigIntSubtractROM	D:\git\testing79m\Microchip\Include\TCPIP Stack\BigInt.h	101;"	p	line:101	signature:(BIGINT*, BIGINT_ROM*)
 BigIntSwapEndianness	D:\git\testing79m\Microchip\Include\TCPIP Stack\BigInt.h	111;"	p	line:111	signature:(BIGINT *a)
 BigIntZero	D:\git\testing79m\Microchip\Include\TCPIP Stack\BigInt.h	104;"	p	line:104	signature:(BIGINT *theInt)
-BlinkingFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	407;"	l	line:407	file:
-BlinkingFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	485;"	l	line:485
+BlinkingFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	1208;"	l	line:1208	file:
+BlinkingFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	1286;"	l	line:1286
 Body	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	163;"	m	line:163
 Body	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	176;"	m	line:176
 BootpFlags	D:\git\testing79m\Microchip\Include\TCPIP Stack\DHCP.h	102;"	m	line:102
 BridgeState	D:\git\testing79m\Microchip\TCPIP Stack\UART2TCPBridge.c	191;"	l	line:191	file:
 Broadcast	D:\git\testing79m\Microchip\Include\TCPIP Stack\ETH97J60.h	68;"	m	line:68
 Broadcast	D:\git\testing79m\Microchip\Include\TCPIP Stack\ETH97J60.h	97;"	m	line:97
-BufferTemp	D:\git\testing79m\Singcom\Drivers\lcd.c	486;"	l	line:486
+BufferTemp	D:\git\testing79m\Singcom\Drivers\lcd.c	1287;"	l	line:1287
 BusyUART2	D:\git\testing79m\Microchip\Include\TCPIP Stack\UART.h	82;"	p	line:82	signature:(void)
 BusyUART2	D:\git\testing79m\Microchip\TCPIP Stack\UART.c	360;"	f	line:360	signature:(void)
 BusyUART2::BusyUSART2	D:\git\testing79m\Port\HardwareProfile.h	1786;"	d	line:1786
@@ -691,7 +691,7 @@ DataRdyUSART2	D:\git\testing79m\Microchip\Include\TCPIP Stack\UART.h	69;"	p	line
 DataRdyUSART2	D:\git\testing79m\Microchip\TCPIP Stack\UART.c	193;"	f	line:193	signature:(void)
 DebugPrint::(a)	D:\git\testing79m\Microchip\Include\TCPIP Stack\Helpers.h	71;"	d	line:71
 DebugPrint::(a){putrsUART(a);}	D:\git\testing79m\Microchip\Include\TCPIP Stack\Helpers.h	69;"	d	line:69
-DecimalPoint	D:\git\testing79m\Singcom\Drivers\lcd.c	34;"	m	line:34	file:
+DecimalPoint	D:\git\testing79m\Singcom\Drivers\lcd.c	38;"	m	line:38	file:
 DefaultIPAddr	D:\git\testing79m\Microchip\Include\TCPIP Stack\StackTsk.h	94;"	m	line:94
 DefaultMask	D:\git\testing79m\Microchip\Include\TCPIP Stack\StackTsk.h	95;"	m	line:95
 Default_value	D:\git\testing79m\Main\Global.h	162;"	p	line:162	signature:(void)
@@ -714,18 +714,18 @@ DestPort	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	133;"	m	line:133	struct:_
 DestinationPort	D:\git\testing79m\Microchip\Include\TCPIP Stack\UDP.h	88;"	m	line:88	struct:_UDP_HEADER
 Digit	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	722;"	l	line:722
 Digit	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	773;"	l	line:773
-DigitsEditable	D:\git\testing79m\Singcom\Drivers\lcd.c	30;"	m	line:30	file:
+DigitsEditable	D:\git\testing79m\Singcom\Drivers\lcd.c	34;"	m	line:34	file:
 Disable::0	D:\git\testing79m\Main\define.h	271;"	d	line:271
 DiscoveryTask	D:\git\testing79m\Microchip\Include\TCPIP Stack\Announce.h	55;"	p	line:55	signature:(void)
-DisplayCompanyMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	798;"	f	line:798	signature:(void)
+DisplayCompanyMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	1599;"	f	line:1599	signature:(void)
 DisplayCompanyMenu	D:\git\testing79m\Singcom\Drivers\lcd.h	21;"	p	line:21	signature:(void)
 DisplayIPValue	D:\git\testing79m\Main\Global.h	158;"	p	line:158	signature:(IP_ADDR)
 DisplayIPValue	D:\git\testing79m\Main\Main.h	83;"	p	line:83	signature:(IP_ADDR IPVal)
 DisplayIPValue	D:\git\testing79m\SysLib\util.c	848;"	f	line:848	signature:(IP_ADDR IPVal)
 DisplayIPValue2	D:\git\testing79m\Main\Global.h	159;"	p	line:159	signature:(IP_ADDR)
 DisplayIPValue2	D:\git\testing79m\Main\Main.h	84;"	p	line:84	signature:(IP_ADDR IPVal)
-DisplayInSubMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	22;"	m	line:22	file:
-DisplaySign	D:\git\testing79m\Singcom\Drivers\lcd.c	33;"	m	line:33	file:
+DisplayInSubMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	26;"	m	line:26	file:
+DisplaySign	D:\git\testing79m\Singcom\Drivers\lcd.c	37;"	m	line:37	file:
 Divisor	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	723;"	l	line:723
 Divisor	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	774;"	l	line:774
 DoUARTConfig	D:\git\testing79m\Main\Global.h	193;"	p	line:193	signature:(void)
@@ -1263,7 +1263,8 @@ EWSR::0x50	D:\git\testing79m\Microchip\TCPIP Stack\SPIFlash.c	72;"	d	line:72	fil
 EXPLORER_16	D:\git\testing79m\Port\HardwareProfile.h	86;"	d	line:86
 EditMode	D:\git\testing79m\Singcom\Drivers\lcd.c	15;"	v	line:15
 EditPosition	D:\git\testing79m\Singcom\Drivers\lcd.c	15;"	v	line:15
-Editable	D:\git\testing79m\Singcom\Drivers\lcd.c	28;"	m	line:28	file:
+EditUpdateFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	20;"	v	line:20
+Editable	D:\git\testing79m\Singcom\Drivers\lcd.c	32;"	m	line:32	file:
 Enable::1	D:\git\testing79m\Main\define.h	270;"	d	line:270
 ExcessiveDefer	D:\git\testing79m\Microchip\Include\TCPIP Stack\ETH97J60.h	70;"	m	line:70
 ExtractURLFields	D:\git\testing79m\Microchip\Include\TCPIP Stack\Helpers.h	124;"	p	line:124	signature:(BYTE *vURL, PROTOCOLS *protocol, BYTE *vUsername, WORD *wUsernameLen, BYTE *vPassword, WORD *wPasswordLen, BYTE *vHostname, WORD *wHostnameLen, WORD *wPort, BYTE *vFilePath, WORD *wFilePathLen)
@@ -1284,7 +1285,7 @@ FindMatchingSocket	D:\git\testing79m\Microchip\TCPIP Stack\UDP.c	136;"	p	line:13
 FindOIDsInRequest	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	300;"	p	line:300	file:	signature:(WORD pdulen)
 FindOIDsInRequest	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	3710;"	f	line:3710	file:	signature:(WORD pdulen)
 FirmwareVersion	D:\git\testing79m\Main\Main.c	67;"	v	line:67
-FixedText	D:\git\testing79m\Singcom\Drivers\lcd.c	23;"	m	line:23	file:
+FixedText	D:\git\testing79m\Singcom\Drivers\lcd.c	27;"	m	line:27	file:
 Flags	D:\git\testing79m\Microchip\Include\TCPIP Stack\SNMP.h	116;"	m	line:116
 Flags	D:\git\testing79m\Microchip\Include\TCPIP Stack\SSL.h	180;"	m	line:180
 Flags	D:\git\testing79m\Microchip\Include\TCPIP Stack\StackTsk.h	103;"	m	line:103
@@ -1839,7 +1840,7 @@ InitFifo2	D:\git\testing79m\Drivers\UARTISR.h	68;"	p	line:68	signature:(void)
 InitFifo3	D:\git\testing79m\Drivers\UARTISR.h	69;"	p	line:69	signature:(void)
 InitFifo4	D:\git\testing79m\Drivers\UARTISR.h	70;"	p	line:70	signature:(void)
 InitFifo5	D:\git\testing79m\Drivers\UARTISR.h	71;"	p	line:71	signature:(void)
-Initial_LCD	D:\git\testing79m\Singcom\Drivers\lcd.c	786;"	f	line:786	signature:(void)
+Initial_LCD	D:\git\testing79m\Singcom\Drivers\lcd.c	1587;"	f	line:1587	signature:(void)
 Initial_LCD	D:\git\testing79m\Singcom\Drivers\lcd.h	20;"	p	line:20	signature:(void)
 InitialiseDualUart	D:\git\testing79m\Drivers\External-Peripherals\DualUART.h	83;"	p	line:83	signature:(void)
 InitialiseDualUart2	D:\git\testing79m\Drivers\External-Peripherals\DualUART.h	84;"	p	line:84	signature:(void)
@@ -1865,7 +1866,7 @@ IsValidStructure	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	315;"	p	line:315
 JEDEC_ID::0x9F	D:\git\testing79m\Microchip\TCPIP Stack\SPIFlash.c	77;"	d	line:77	file:
 KUBAND::1	D:\git\testing79m\Main\define.h	246;"	d	line:246
 KeyPressedFlag	D:\git\testing79m\Main\Global.c	35;"	v	line:35
-KeyProcessing	D:\git\testing79m\Singcom\Drivers\lcd.c	87;"	f	line:87	signature:(void)
+KeyProcessing	D:\git\testing79m\Singcom\Drivers\lcd.c	888;"	f	line:888	signature:(void)
 KeyProcessing	D:\git\testing79m\Singcom\Drivers\lcd.h	11;"	p	line:11	signature:(void)
 KeyProcessing	D:\git\testing79m\Singcom\Drivers\oled_c1.h	267;"	p	line:267	signature:(void)
 Kind	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	168;"	m	line:168	struct:_TCP_OPTIONS	file:
@@ -1886,16 +1887,16 @@ LCDBufferPosition	D:\git\testing79m\Main\Global.c	5;"	v	line:5
 LCDCTRL_CS_IO::(PORTGbits.RG9)	D:\git\testing79m\Port\HardwareProfile.h	1385;"	d	line:1385
 LCDCTRL_CS_TRIS::(TRISGbits.TRISG9)	D:\git\testing79m\Port\HardwareProfile.h	1384;"	d	line:1384
 LCDClear	D:\git\testing79m\Singcom\Drivers\oled_c1.h	236;"	p	line:236	signature:(void)
-LCDDigitUpdateFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	49;"	v	line:49
+LCDDigitUpdateFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	53;"	v	line:53
 LCDDisplay	D:\git\testing79m\Singcom\Drivers\oled_c1.h	243;"	p	line:243	signature:(unsigned char displayflag, unsigned char cusorflag, unsigned char blinkflag)
-LCDDisplayLoadData	D:\git\testing79m\Singcom\Drivers\lcd.c	561;"	f	line:561	signature:(void)
+LCDDisplayLoadData	D:\git\testing79m\Singcom\Drivers\lcd.c	1362;"	f	line:1362	signature:(void)
 LCDDisplayLoadData	D:\git\testing79m\Singcom\Drivers\lcd.h	17;"	p	line:17	signature:(void)
 LCDEntryMode	D:\git\testing79m\Singcom\Drivers\oled_c1.h	240;"	p	line:240	signature:(void)
-LCDMenuInScreen	D:\git\testing79m\Singcom\Drivers\lcd.c	341;"	f	line:341	signature:(void)
+LCDMenuInScreen	D:\git\testing79m\Singcom\Drivers\lcd.c	1142;"	f	line:1142	signature:(void)
 LCDMenuInScreen	D:\git\testing79m\Singcom\Drivers\lcd.h	12;"	p	line:12	signature:(void)
-LCDMenuValue2Char	D:\git\testing79m\Singcom\Drivers\lcd.c	737;"	f	line:737	signature:(char *ValueInChar, unsigned char TempMenu)
+LCDMenuValue2Char	D:\git\testing79m\Singcom\Drivers\lcd.c	1538;"	f	line:1538	signature:(char *ValueInChar, unsigned char TempMenu)
 LCDPrintBuffer	D:\git\testing79m\Singcom\Drivers\lcd.c	16;"	v	line:16
-LCDRefreshFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	48;"	v	line:48
+LCDRefreshFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	52;"	v	line:52
 LCDReturnhome	D:\git\testing79m\Singcom\Drivers\oled_c1.h	238;"	p	line:238	signature:(void)
 LCDWriteString	D:\git\testing79m\Singcom\Drivers\oled_c1.c	97;"	f	line:97	signature:(unsigned char * MSG)
 LCDWriteString	D:\git\testing79m\Singcom\Drivers\oled_c1.h	232;"	p	line:232	signature:(unsigned char * MSG)
@@ -1943,11 +1944,11 @@ LCD_RS_TRIS::(TRISBbits.TRISB15)	D:\git\testing79m\Port\HardwareProfile.h	1063;"
 LCD_RS_TRIS::(TRISCbits.TRISC7)	D:\git\testing79m\Port\HardwareProfile.h	734;"	d	line:734
 LCD__u8GetOnOff	D:\git\testing79m\Singcom\Drivers\oled_c1.h	260;"	p	line:260	signature:(void)
 LCD__u8UpdateToModule	D:\git\testing79m\Singcom\Drivers\oled_c1.h	262;"	p	line:262	signature:(BYTE* pu8Parameter,BYTE* pu8Data ,BYTE u8CompareFlag,BYTE* pu8SendData)
-LCD_vEnableInterrupt	D:\git\testing79m\Singcom\Drivers\lcd.c	807;"	f	line:807	signature:(void)
+LCD_vEnableInterrupt	D:\git\testing79m\Singcom\Drivers\lcd.c	1608;"	f	line:1608	signature:(void)
 LCD_vEnableInterrupt	D:\git\testing79m\Singcom\Drivers\lcd.h	22;"	p	line:22	signature:(void)
-LCD_vSetIO	D:\git\testing79m\Singcom\Drivers\lcd.c	770;"	f	line:770	signature:(void)
+LCD_vSetIO	D:\git\testing79m\Singcom\Drivers\lcd.c	1571;"	f	line:1571	signature:(void)
 LCD_vSetIO	D:\git\testing79m\Singcom\Drivers\lcd.h	19;"	p	line:19	signature:(void)
-LCD_vSetKepad	D:\git\testing79m\Singcom\Drivers\lcd.c	757;"	f	line:757	signature:(void)
+LCD_vSetKepad	D:\git\testing79m\Singcom\Drivers\lcd.c	1558;"	f	line:1558	signature:(void)
 LCD_vSetKepad	D:\git\testing79m\Singcom\Drivers\lcd.h	18;"	p	line:18	signature:(void)
 LD	D:\git\testing79m\Microchip\Include\GenericTypeDefs.h	202;"	m	line:202	struct:_QWORD_VAL::<anonymous>
 LEASE_GRANTED	D:\git\testing79m\Microchip\TCPIP Stack\DHCPs.c	79;"	e	line:79	enum:_DHCP_CONTROL_BLOCK::<anonymous>	file:
@@ -2548,18 +2549,18 @@ MaxDataLength::55	D:\git\testing79m\Main\define.h	257;"	d	line:257
 MaxPollingCount1::3	D:\git\testing79m\Main\define.h	264;"	d	line:264
 MaxPollingCount::2	D:\git\testing79m\Main\define.h	263;"	d	line:263
 MaxSegSize	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	170;"	m	line:170	struct:_TCP_OPTIONS	file:
-MaxValue	D:\git\testing79m\Singcom\Drivers\lcd.c	41;"	m	line:41	file:
-MaxValueH	D:\git\testing79m\Singcom\Drivers\lcd.c	40;"	m	line:40	file:
+MaxValue	D:\git\testing79m\Singcom\Drivers\lcd.c	45;"	m	line:45	file:
+MaxValueH	D:\git\testing79m\Singcom\Drivers\lcd.c	44;"	m	line:44	file:
 MaximumCollisions	D:\git\testing79m\Microchip\Include\TCPIP Stack\ETH97J60.h	71;"	m	line:71
-MenuDisplay	D:\git\testing79m\Singcom\Drivers\lcd.c	51;"	v	line:51
-MenuTemp	D:\git\testing79m\Singcom\Drivers\lcd.c	344;"	l	line:344
-MenuTemp	D:\git\testing79m\Singcom\Drivers\lcd.c	409;"	l	line:409
-MenuTitle	D:\git\testing79m\Singcom\Drivers\lcd.c	20;"	m	line:20	file:
-MenuTitleShort	D:\git\testing79m\Singcom\Drivers\lcd.c	21;"	m	line:21	file:
-MenuValue	D:\git\testing79m\Singcom\Drivers\lcd.c	69;"	v	line:69
+MenuDisplay	D:\git\testing79m\Singcom\Drivers\lcd.c	55;"	v	line:55
+MenuTemp	D:\git\testing79m\Singcom\Drivers\lcd.c	1145;"	l	line:1145
+MenuTemp	D:\git\testing79m\Singcom\Drivers\lcd.c	1210;"	l	line:1210
+MenuTitle	D:\git\testing79m\Singcom\Drivers\lcd.c	24;"	m	line:24	file:
+MenuTitleShort	D:\git\testing79m\Singcom\Drivers\lcd.c	25;"	m	line:25	file:
+MenuValue	D:\git\testing79m\Singcom\Drivers\lcd.c	73;"	v	line:73
 MessageType	D:\git\testing79m\Microchip\Include\TCPIP Stack\DHCP.h	96;"	m	line:96
-MinValue	D:\git\testing79m\Singcom\Drivers\lcd.c	43;"	m	line:43	file:
-MinValueH	D:\git\testing79m\Singcom\Drivers\lcd.c	42;"	m	line:42	file:
+MinValue	D:\git\testing79m\Singcom\Drivers\lcd.c	47;"	m	line:47	file:
+MinValueH	D:\git\testing79m\Singcom\Drivers\lcd.c	46;"	m	line:46	file:
 MinorAlarm::0	D:\git\testing79m\Main\define.h	273;"	d	line:273
 MinuteCounter	D:\git\testing79m\Main\Main.c	71;"	v	line:71
 Multicast	D:\git\testing79m\Microchip\Include\TCPIP Stack\ETH97J60.h	67;"	m	line:67
@@ -2784,14 +2785,14 @@ PrimaryDNSServer	D:\git\testing79m\Microchip\Include\TCPIP Stack\StackTsk.h	92;"
 PrintBlinkLCD	D:\git\testing79m\Singcom\Drivers\oled_c1.h	249;"	p	line:249	signature:(void)
 PrintCGRAM	D:\git\testing79m\Singcom\Drivers\oled_c1.h	234;"	p	line:234	signature:(unsigned char number1)
 PrintCompanyLCD	D:\git\testing79m\Singcom\Drivers\oled_c1.c	158;"	f	line:158	signature:(void)
-PrintLCD	D:\git\testing79m\Singcom\Drivers\lcd.c	404;"	f	line:404	signature:(void)
+PrintLCD	D:\git\testing79m\Singcom\Drivers\lcd.c	1205;"	f	line:1205	signature:(void)
 PrintLCD	D:\git\testing79m\Singcom\Drivers\oled_c1.h	247;"	p	line:247	signature:(void)
-PrintLCDEditPosition	D:\git\testing79m\Singcom\Drivers\lcd.c	372;"	f	line:372	signature:(void)
+PrintLCDEditPosition	D:\git\testing79m\Singcom\Drivers\lcd.c	1173;"	f	line:1173	signature:(void)
 PrintLCDEditPosition	D:\git\testing79m\Singcom\Drivers\lcd.h	13;"	p	line:13	signature:(void)
 PrintLCDEditPosition	D:\git\testing79m\Singcom\Drivers\lcd.h	16;"	p	line:16	signature:(void)
-PrintLCDFromBuffer	D:\git\testing79m\Singcom\Drivers\lcd.c	534;"	f	line:534	signature:(void)
+PrintLCDFromBuffer	D:\git\testing79m\Singcom\Drivers\lcd.c	1335;"	f	line:1335	signature:(void)
 PrintLCDFromBuffer	D:\git\testing79m\Singcom\Drivers\lcd.h	15;"	p	line:15	signature:(void)
-PrintLCDWholePage	D:\git\testing79m\Singcom\Drivers\lcd.c	483;"	f	line:483	signature:(void)
+PrintLCDWholePage	D:\git\testing79m\Singcom\Drivers\lcd.c	1284;"	f	line:1284	signature:(void)
 PrintLCDWholePage	D:\git\testing79m\Singcom\Drivers\lcd.h	14;"	p	line:14	signature:(void)
 Printed	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	724;"	l	line:724
 Printed	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	775;"	l	line:775
@@ -2974,6 +2975,7 @@ Read_ADC	D:\git\testing79m\Main\Global.h	100;"	p	line:100	signature:(unsigned in
 RebootTask	D:\git\testing79m\Microchip\Include\TCPIP Stack\Reboot.h	54;"	p	line:54	signature:(void)
 ReceiveOk	D:\git\testing79m\Microchip\Include\TCPIP Stack\ETH97J60.h	95;"	m	line:95
 ReceivedChecksum	D:\git\testing79m\Microchip\TCPIP Stack\IP.c	141;"	l	line:141
+RefreshFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	19;"	v	line:19
 RelayAgentIP	D:\git\testing79m\Microchip\Include\TCPIP Stack\DHCP.h	106;"	m	line:106
 Remote	D:\git\testing79m\Microchip\Include\TCPIP Stack\SSL.h	215;"	m	line:215
 RemoteHost	D:\git\testing79m\Microchip\TCPIP Stack\ICMP.c	88;"	m	line:88	file:
@@ -3457,9 +3459,9 @@ SYS_NAME1::(3)	D:\git\testing79m\App\SNMP\mib.h	14;"	d	line:14
 SYS_UP_TIME::(250)	D:\git\testing79m\App\SNMP\mib.h	12;"	d	line:12
 SYS__u8InitData	D:\git\testing79m\Main\Main.c	105;"	p	line:105	file:	signature:(void)
 SYS__u8InitData	D:\git\testing79m\Main\Main.c	235;"	f	line:235	file:	signature:(void)
-SYS__u8UpdateDownConverter	D:\git\testing79m\Main\Main.c	587;"	f	line:587	file:
-SYS__u8UpdateUpConverter	D:\git\testing79m\Main\Main.c	395;"	f	line:395	file:
-SYS__u8UpdateVOL	D:\git\testing79m\Main\Main.c	785;"	f	line:785	file:
+SYS__u8UpdateDownConverter	D:\git\testing79m\Singcom\Drivers\lcd.c	287;"	f	line:287	file:
+SYS__u8UpdateUpConverter	D:\git\testing79m\Singcom\Drivers\lcd.c	95;"	f	line:95	file:
+SYS__u8UpdateVOL	D:\git\testing79m\Singcom\Drivers\lcd.c	485;"	f	line:485	file:
 SYS__vLcdKeyPadTask	D:\git\testing79m\Main\Main.c	104;"	p	line:104	file:	signature:(void)
 SYS__vLcdKeyPadTask	D:\git\testing79m\Main\Main.c	201;"	f	line:201	file:	signature:(void)
 SYS__vStatusTask	D:\git\testing79m\Main\Main.c	102;"	p	line:102	file:
@@ -3508,7 +3510,7 @@ SetLEDConfig::(NewConfig)WritePHYReg(PHLCON,	D:\git\testing79m\Microchip\Include
 SetRXHashTableEntry	D:\git\testing79m\Microchip\Include\TCPIP Stack\MAC.h	168;"	p	line:168	signature:(MAC_ADDR DestMACAddr)
 Set_ID	D:\git\testing79m\Main\Global.h	183;"	p	line:183	signature:(unsigned char)
 Size	D:\git\testing79m\Microchip\Include\TCPIP Stack\SNMP.h	107;"	m	line:107
-SizeOfText	D:\git\testing79m\Singcom\Drivers\lcd.c	739;"	l	line:739
+SizeOfText	D:\git\testing79m\Singcom\Drivers\lcd.c	1540;"	l	line:1540
 SocketWithRxData	D:\git\testing79m\Microchip\TCPIP Stack\UDP.c	129;"	v	line:129	file:
 SourceAddress	D:\git\testing79m\Microchip\Include\TCPIP Stack\IP.h	74;"	m	line:74	struct:_IP_HEADER
 SourceAddress	D:\git\testing79m\Microchip\Include\TCPIP Stack\IP.h	82;"	m	line:82	struct:_PSEUDO_HEADER
@@ -3527,7 +3529,7 @@ StaticVars	D:\git\testing79m\Microchip\TCPIP Stack\ICMP.c	90;"	v	line:90	file:
 StatusVector	D:\git\testing79m\Microchip\TCPIP Stack\ETH97J60.c	89;"	m	line:89	struct:_ENC_PREAMBLE	file:
 StringToIPAddress	D:\git\testing79m\Microchip\Include\TCPIP Stack\Helpers.h	79;"	p	line:79	signature:(BYTE* str, IP_ADDR* IPAddress)
 StringToIPAddress	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	327;"	f	line:327	signature:(BYTE* str, IP_ADDR* IPAddress)
-SubMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	563;"	l	line:563
+SubMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	1364;"	l	line:1364
 Subject	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	153;"	m	line:153
 Subject	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	174;"	m	line:174
 SwapARPPacket	D:\git\testing79m\Microchip\Include\TCPIP Stack\ARP.h	88;"	p	line:88	signature:(ARP_PACKET* p)
@@ -3815,15 +3817,15 @@ TargetMACAddr	D:\git\testing79m\Microchip\Include\TCPIP Stack\ARP.h	81;"	m	line:
 TelnetTask	D:\git\testing79m\Microchip\Include\TCPIP Stack\Telnet.h	56;"	p	line:56	signature:(void)
 TelnetTask::	D:\git\testing79m\Microchip\Include\TCPIP Stack\Telnet.h	58;"	d	line:58
 Temp	D:\git\testing79m\App\WebUI\HTTPPrint.c	624;"	l	line:624
-TempBlinkingPos	D:\git\testing79m\Singcom\Drivers\lcd.c	409;"	l	line:409
-TempDigitsEditable	D:\git\testing79m\Singcom\Drivers\lcd.c	568;"	l	line:568
-TempDisplay	D:\git\testing79m\Singcom\Drivers\lcd.c	566;"	l	line:566
-TempMenuLength	D:\git\testing79m\Singcom\Drivers\lcd.c	343;"	l	line:343
-TempMenuLength	D:\git\testing79m\Singcom\Drivers\lcd.c	409;"	l	line:409
-TempMenuLength1	D:\git\testing79m\Singcom\Drivers\lcd.c	343;"	l	line:343
-TempMenuTitle	D:\git\testing79m\Singcom\Drivers\lcd.c	567;"	l	line:567
-TextValue0	D:\git\testing79m\Singcom\Drivers\lcd.c	31;"	m	line:31	file:
-TextValue1	D:\git\testing79m\Singcom\Drivers\lcd.c	32;"	m	line:32	file:
+TempBlinkingPos	D:\git\testing79m\Singcom\Drivers\lcd.c	1210;"	l	line:1210
+TempDigitsEditable	D:\git\testing79m\Singcom\Drivers\lcd.c	1369;"	l	line:1369
+TempDisplay	D:\git\testing79m\Singcom\Drivers\lcd.c	1367;"	l	line:1367
+TempMenuLength	D:\git\testing79m\Singcom\Drivers\lcd.c	1144;"	l	line:1144
+TempMenuLength	D:\git\testing79m\Singcom\Drivers\lcd.c	1210;"	l	line:1210
+TempMenuLength1	D:\git\testing79m\Singcom\Drivers\lcd.c	1144;"	l	line:1144
+TempMenuTitle	D:\git\testing79m\Singcom\Drivers\lcd.c	1368;"	l	line:1368
+TextValue0	D:\git\testing79m\Singcom\Drivers\lcd.c	35;"	m	line:35	file:
+TextValue1	D:\git\testing79m\Singcom\Drivers\lcd.c	36;"	m	line:36	file:
 TickConvertToMilliseconds	D:\git\testing79m\Microchip\Include\TCPIP Stack\Tick.h	82;"	p	line:82	signature:(DWORD dwTickValue)
 TickConvertToMilliseconds	D:\git\testing79m\Microchip\TCPIP Stack\Tick.c	330;"	f	line:330	signature:(DWORD dwTickValue)
 TickGet	D:\git\testing79m\Microchip\Include\TCPIP Stack\Tick.h	79;"	p	line:79	signature:(void)
@@ -3841,7 +3843,7 @@ TimeToLive	D:\git\testing79m\Microchip\Include\TCPIP Stack\IP.h	71;"	m	line:71	s
 Timer2Counter	D:\git\testing79m\Drivers\MCU-Internal\ISR.c	17;"	v	line:17
 To	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	133;"	m	line:133
 To	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	170;"	m	line:170
-ToBeUpdated	D:\git\testing79m\Singcom\Drivers\lcd.c	45;"	m	line:45	file:
+ToBeUpdated	D:\git\testing79m\Singcom\Drivers\lcd.c	49;"	m	line:49	file:
 TotalLength	D:\git\testing79m\Microchip\Include\TCPIP Stack\IP.h	68;"	m	line:68	struct:_IP_HEADER
 TransactionID	D:\git\testing79m\Microchip\Include\TCPIP Stack\DHCP.h	100;"	m	line:100
 Trap_t	D:\git\testing79m\Main\Global.h	340;"	t	line:340
@@ -4074,24 +4076,24 @@ UpCvt_vSetPower	D:\git\testing79m\Singcom\Devices\UpConverter_c1.c	88;"	f	line:8
 UpCvt_vSetStPwr	D:\git\testing79m\Devices\DeviceApi.h	70;"	p	line:70	signature:(void)
 UpCvt_vSetStPwr	D:\git\testing79m\Singcom\Devices\UpConverter_c1.c	95;"	f	line:95	signature:(void)
 UpdataIP	D:\git\testing79m\Main\Global.h	156;"	p	line:156	signature:()
-UpdateData	D:\git\testing79m\Main\Main.c	1007;"	f	line:1007	signature:(void)
+UpdateData	D:\git\testing79m\Main\Main.c	400;"	f	line:400	signature:(void)
 UpdateData	D:\git\testing79m\Main\Main.h	91;"	p	line:91	signature:(void)
-UpdateDataLEDSys	D:\git\testing79m\Main\Main.c	1075;"	f	line:1075
+UpdateDataLEDSys	D:\git\testing79m\Main\Main.c	415;"	f	line:415
 UpdateDataLEDSys	D:\git\testing79m\Main\Main.h	95;"	p	line:95	signature:(void)
-UpdateDataMenuSys	D:\git\testing79m\Main\Main.c	1042;"	f	line:1042
 UpdateDataMenuSys	D:\git\testing79m\Main\Main.h	92;"	p	line:92	signature:(void)
-UpdateDataModuleSys	D:\git\testing79m\Main\Main.c	1015;"	f	line:1015	signature:(void)
+UpdateDataMenuSys	D:\git\testing79m\Singcom\Drivers\lcd.c	761;"	f	line:761
 UpdateDataModuleSys	D:\git\testing79m\Main\Main.h	93;"	p	line:93	signature:(void)
-UpdateDataUartSys	D:\git\testing79m\Main\Main.c	1071;"	f	line:1071
+UpdateDataModuleSys	D:\git\testing79m\Singcom\Drivers\lcd.c	733;"	f	line:733	signature:(void)
+UpdateDataUartSys	D:\git\testing79m\Main\Main.c	411;"	f	line:411
 UpdateDataUartSys	D:\git\testing79m\Main\Main.h	94;"	p	line:94	signature:(void)
 UpdatePort	D:\git\testing79m\Microchip\Include\TCPIP Stack\DynDNS.h	144;"	m	line:144
 UpdateReadPointer	D:\git\testing79m\Microchip\TCPIP Stack\ETH97J60.c	869;"	l	line:869
 UpdateServer	D:\git\testing79m\Microchip\Include\TCPIP Stack\DynDNS.h	142;"	m	line:142
 UpdateServer	D:\git\testing79m\Microchip\Include\TCPIP Stack\DynDNS.h	167;"	m	line:167
-UpdateStatus	D:\git\testing79m\Main\Main.c	1079;"	f	line:1079	signature:(void)
+UpdateStatus	D:\git\testing79m\Singcom\Drivers\lcd.c	708;"	f	line:708	signature:(void)
 UpdateStatus	D:\git\testing79m\Singcom\Drivers\oled_c1.h	268;"	p	line:268	signature:(void)
 UpdateWritePointer	D:\git\testing79m\Microchip\TCPIP Stack\ETH97J60.c	868;"	l	line:868
-UpdatedFromMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	44;"	m	line:44	file:
+UpdatedFromMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	48;"	m	line:48	file:
 UrgentPointer	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	160;"	m	line:160	struct:_TCP_HEADER	file:
 UseSSL	D:\git\testing79m\Microchip\Include\TCPIP Stack\SMTP.h	180;"	m	line:180
 Username	D:\git\testing79m\Microchip\Include\TCPIP Stack\DynDNS.h	150;"	m	line:150
@@ -4147,14 +4149,15 @@ Val	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	196;"	m	line:196	file:
 Val	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	207;"	m	line:207	file:
 Val	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	226;"	m	line:226	file:
 Val	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	140;"	m	line:140	struct:_TCP_HEADER::<anonymous>	file:
-ValPos	D:\git\testing79m\Singcom\Drivers\lcd.c	828;"	l	line:828
+ValPos	D:\git\testing79m\Singcom\Drivers\lcd.c	1629;"	l	line:1629
 Value	D:\git\testing79m\App\WebUI\HTTPPrint.c	710;"	l	line:710
 Value	D:\git\testing79m\App\WebUI\HTTPPrint.c	771;"	l	line:771
-Value	D:\git\testing79m\Singcom\Drivers\lcd.c	39;"	m	line:39	file:
-Value2DisplayBuffer	D:\git\testing79m\Singcom\Drivers\lcd.c	826;"	f	line:826	signature:(char *DisplayBuffer, char *Value, char *DigEditable)
+Value	D:\git\testing79m\Singcom\Drivers\lcd.c	43;"	m	line:43	file:
+Value2DisplayBuffer	D:\git\testing79m\Singcom\Drivers\lcd.c	1627;"	f	line:1627	signature:(char *DisplayBuffer, char *Value, char *DigEditable)
 Value2DisplayBuffer	D:\git\testing79m\Singcom\Drivers\lcd.h	23;"	p	line:23	signature:(char *DisplayBuffer, char *Value, char *DigEditable)
-ValueH	D:\git\testing79m\Singcom\Drivers\lcd.c	38;"	m	line:38	file:
-ValueType	D:\git\testing79m\Singcom\Drivers\lcd.c	29;"	m	line:29	file:
+ValueH	D:\git\testing79m\Singcom\Drivers\lcd.c	42;"	m	line:42	file:
+ValueType	D:\git\testing79m\Singcom\Drivers\lcd.c	33;"	m	line:33	file:
+ValueUpdateFlag	D:\git\testing79m\Singcom\Drivers\lcd.c	21;"	v	line:21
 VersionIHL	D:\git\testing79m\Microchip\Include\TCPIP Stack\IP.h	66;"	m	line:66	struct:_IP_HEADER
 WARM_START	D:\git\testing79m\Microchip\Include\TCPIP Stack\SNMP.h	155;"	e	line:155
 WDI_FLAG::LATBbits.LATB5	D:\git\testing79m\Main\define.h	387;"	d	line:387
@@ -4739,9 +4742,9 @@ bits	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	108;"	m	line:108	file:
 bits	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	132;"	m	line:132	file:
 bits	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	154;"	m	line:154	union:_TCP_HEADER::<anonymous>	file:
 blockLen	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	4896;"	l	line:4896
-boReturn	D:\git\testing79m\Main\Main.c	400;"	l	line:400
-boReturn	D:\git\testing79m\Main\Main.c	592;"	l	line:592
-boReturn	D:\git\testing79m\Main\Main.c	789;"	l	line:789
+boReturn	D:\git\testing79m\Singcom\Drivers\lcd.c	100;"	l	line:100
+boReturn	D:\git\testing79m\Singcom\Drivers\lcd.c	292;"	l	line:292
+boReturn	D:\git\testing79m\Singcom\Drivers\lcd.c	489;"	l	line:489
 btohexa_high	D:\git\testing79m\Microchip\Include\TCPIP Stack\Helpers.h	84;"	p	line:84	signature:(BYTE b)
 btohexa_high	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	864;"	f	line:864	signature:(BYTE b)
 btohexa_low	D:\git\testing79m\Microchip\Include\TCPIP Stack\Helpers.h	85;"	p	line:85	signature:(BYTE b)
@@ -4920,8 +4923,8 @@ errorStatusOffset	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	1059;"	l	line:1
 eventTime	D:\git\testing79m\Microchip\Include\TCPIP Stack\TCP.h	118;"	m	line:118
 eventTime2	D:\git\testing79m\Microchip\Include\TCPIP Stack\TCP.h	119;"	m	line:119
 ext	D:\git\testing79m\Microchip\TCPIP Stack\HTTP2.c	379;"	l	line:379
-fAtten	D:\git\testing79m\Main\Main.c	401;"	l	line:401
-fAtten	D:\git\testing79m\Main\Main.c	593;"	l	line:593
+fAtten	D:\git\testing79m\Singcom\Drivers\lcd.c	101;"	l	line:101
+fAtten	D:\git\testing79m\Singcom\Drivers\lcd.c	293;"	l	line:293
 fModulo	D:\git\testing79m\SysLib\util.c	307;"	l	line:307
 fOutputPower	D:\git\testing79m\Main\Global.h	13;"	m	line:13
 fOutputPower	D:\git\testing79m\Main\Global.h	29;"	m	line:29
@@ -4929,8 +4932,8 @@ fReturn	D:\git\testing79m\App\SNMP\SNMPApp.c	448;"	l	line:448
 fReturn	D:\git\testing79m\App\SNMP\SNMPApp.c	647;"	l	line:647
 fSetPwr	D:\git\testing79m\Main\Global.h	16;"	m	line:16
 fSetPwr	D:\git\testing79m\Main\Global.h	32;"	m	line:32
-fSetPwr	D:\git\testing79m\Main\Main.c	402;"	l	line:402
-fSetPwr	D:\git\testing79m\Main\Main.c	594;"	l	line:594
+fSetPwr	D:\git\testing79m\Singcom\Drivers\lcd.c	102;"	l	line:102
+fSetPwr	D:\git\testing79m\Singcom\Drivers\lcd.c	294;"	l	line:294
 fSign	D:\git\testing79m\SysLib\util.c	251;"	l	line:251
 fTemp	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	465;"	l	line:465
 fTemp	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	555;"	l	line:555
@@ -5040,7 +5043,6 @@ i	D:\git\testing79m\Bootstrap\Initialization.c	10;"	l	line:10
 i	D:\git\testing79m\Bootstrap\Initialization.c	285;"	l	line:285
 i	D:\git\testing79m\Drivers\MCU-Internal\ISR.c	23;"	l	line:23
 i	D:\git\testing79m\Drivers\MCU-Internal\devspi.c	77;"	l	line:77
-i	D:\git\testing79m\Main\Main.c	1045;"	l	line:1045
 i	D:\git\testing79m\Microchip\Include\TCPIP Stack\ARCFOUR.h	65;"	m	line:65
 i	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	1030;"	l	line:1030
 i	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	211;"	l	line:211
@@ -5080,15 +5082,16 @@ i	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	4571;"	l	line:4571
 i	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	4999;"	l	line:4999
 i	D:\git\testing79m\Microchip\TCPIP Stack\UART2TCPBridge.c	388;"	l	line:388	file:
 i	D:\git\testing79m\Microchip\TCPIP Stack\UART2TCPBridge.c	452;"	l	line:452
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	196;"	l	line:196
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	236;"	l	line:236
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	374;"	l	line:374
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	406;"	l	line:406
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	485;"	l	line:485
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	536;"	l	line:536
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	565;"	l	line:565
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	740;"	l	line:740
-i	D:\git\testing79m\Singcom\Drivers\lcd.c	829;"	l	line:829
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1037;"	l	line:1037
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1175;"	l	line:1175
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1207;"	l	line:1207
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1286;"	l	line:1286
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1337;"	l	line:1337
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1366;"	l	line:1366
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1541;"	l	line:1541
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	1630;"	l	line:1630
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	764;"	l	line:764
+i	D:\git\testing79m\Singcom\Drivers\lcd.c	997;"	l	line:997
 i	D:\git\testing79m\Singcom\Drivers\oled_c1.c	115;"	l	line:115
 i	D:\git\testing79m\Singcom\Drivers\oled_c1.c	160;"	l	line:160
 i	D:\git\testing79m\Singcom\Drivers\oled_c1.c	88;"	l	line:88
@@ -5170,18 +5173,18 @@ j	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	739;"	l	line:739
 j	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	633;"	l	line:633
 j	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	1853;"	l	line:1853
 j	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	2027;"	l	line:2027
-j	D:\git\testing79m\Singcom\Drivers\lcd.c	196;"	l	line:196
-j	D:\git\testing79m\Singcom\Drivers\lcd.c	236;"	l	line:236
-j	D:\git\testing79m\Singcom\Drivers\lcd.c	565;"	l	line:565
-j	D:\git\testing79m\Singcom\Drivers\lcd.c	829;"	l	line:829
+j	D:\git\testing79m\Singcom\Drivers\lcd.c	1037;"	l	line:1037
+j	D:\git\testing79m\Singcom\Drivers\lcd.c	1366;"	l	line:1366
+j	D:\git\testing79m\Singcom\Drivers\lcd.c	1630;"	l	line:1630
+j	D:\git\testing79m\Singcom\Drivers\lcd.c	997;"	l	line:997
 j	D:\git\testing79m\SysLib\util.c	108;"	l	line:108
 j	D:\git\testing79m\SysLib\util.c	161;"	l	line:161
 k	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	956;"	l	line:956
 k	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	1853;"	l	line:1853
 k	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	2027;"	l	line:2027
-k	D:\git\testing79m\Singcom\Drivers\lcd.c	196;"	l	line:196
-k	D:\git\testing79m\Singcom\Drivers\lcd.c	564;"	l	line:564
-k	D:\git\testing79m\Singcom\Drivers\lcd.c	830;"	l	line:830
+k	D:\git\testing79m\Singcom\Drivers\lcd.c	1365;"	l	line:1365
+k	D:\git\testing79m\Singcom\Drivers\lcd.c	1631;"	l	line:1631
+k	D:\git\testing79m\Singcom\Drivers\lcd.c	997;"	l	line:997
 keypad_tmr	D:\git\testing79m\Main\Main.c	95;"	v	line:95	file:
 lMissingBytes	D:\git\testing79m\Microchip\TCPIP Stack\TCP.c	3389;"	l	line:3389
 lastFailure	D:\git\testing79m\App\WebUI\HTTPApp.c	83;"	v	line:83
@@ -5467,31 +5470,6 @@ putsUSART2	D:\git\testing79m\Microchip\TCPIP Stack\UART.c	226;"	f	line:226	signa
 putsUSART2_232	D:\git\testing79m\Microchip\Include\TCPIP Stack\UART.h	74;"	p	line:74	signature:( char *data)
 pvfMoveCursorLeft	D:\git\testing79m\Singcom\Drivers\oled_c1.h	66;"	m	line:66
 pvfMoveCursorRight	D:\git\testing79m\Singcom\Drivers\oled_c1.h	67;"	m	line:67
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	420;"	p	line:420	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	438;"	p	line:438	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	469;"	p	line:469	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	495;"	p	line:495	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	512;"	p	line:512	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	533;"	p	line:533	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	554;"	p	line:554	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	579;"	p	line:579	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	615;"	p	line:615	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	631;"	p	line:631	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	659;"	p	line:659	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	684;"	p	line:684	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	705;"	p	line:705	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	729;"	p	line:729	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	752;"	p	line:752	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	777;"	p	line:777	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	818;"	p	line:818	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	849;"	p	line:849	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	877;"	p	line:877	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	904;"	p	line:904	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	922;"	p	line:922	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	937;"	p	line:937	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	953;"	p	line:953	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	967;"	p	line:967	file:
-pvfPrintMenu	D:\git\testing79m\Main\Main.c	980;"	p	line:980	file:
 pvfPrintMenu	D:\git\testing79m\Singcom\Drivers\oled_c1.h	64;"	m	line:64
 pvfSetValue	D:\git\testing79m\Singcom\Drivers\oled_c1.h	65;"	m	line:65
 pvtObjIdentifier	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	3769;"	l	line:3769
@@ -5500,6 +5478,7 @@ random	D:\git\testing79m\Microchip\Include\TCPIP Stack\SSL.h	214;"	m	line:214
 read	D:\git\testing79m\Microchip\TCPIP Stack\MPFS2.c	537;"	l	line:537
 read	D:\git\testing79m\Microchip\TCPIP Stack\MPFS2.c	639;"	l	line:639
 readCommunity	D:\git\testing79m\Microchip\Include\TCPIP Stack\StackTsk.h	113;"	m	line:113
+readflag	D:\git\testing79m\Singcom\Drivers\lcd.c	93;"	v	line:93
 rec	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	658;"	l	line:658
 receiveflag	D:\git\testing79m\Drivers\UARTISR.h	24;"	m	line:24	struct:uartDCB_s
 ref	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	1872;"	l	line:1872
@@ -5723,8 +5702,8 @@ t	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	1222;"	l	line:1222
 t	D:\git\testing79m\Microchip\TCPIP Stack\Helpers.c	978;"	l	line:978
 tDCController	D:\git\testing79m\Main\Global.h	54;"	t	line:54
 tDownConverter	D:\git\testing79m\Main\Global.h	37;"	t	line:37
-tMenuDisplay	D:\git\testing79m\Singcom\Drivers\lcd.c	35;"	t	line:35	file:
-tMenuValue	D:\git\testing79m\Singcom\Drivers\lcd.c	46;"	t	line:46	file:
+tMenuDisplay	D:\git\testing79m\Singcom\Drivers\lcd.c	39;"	t	line:39	file:
+tMenuValue	D:\git\testing79m\Singcom\Drivers\lcd.c	50;"	t	line:50	file:
 tUpConverter	D:\git\testing79m\Main\Global.h	21;"	t	line:21
 tUpDownConverter	D:\git\testing79m\Main\Global.h	60;"	t	line:60
 table	D:\git\testing79m\Microchip\Include\TCPIP Stack\SNMP.h	117;"	m	line:117
@@ -5745,18 +5724,18 @@ temp	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2086;"	l	line:2086
 temp	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2527;"	l	line:2527
 temp	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	3335;"	l	line:3335
 temp	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	3539;"	l	line:3539
-temp	D:\git\testing79m\Singcom\Drivers\lcd.c	280;"	l	line:280
-temp	D:\git\testing79m\Singcom\Drivers\lcd.c	374;"	l	line:374
-temp	D:\git\testing79m\Singcom\Drivers\lcd.c	406;"	l	line:406
-temp	D:\git\testing79m\Singcom\Drivers\lcd.c	485;"	l	line:485
-temp	D:\git\testing79m\Singcom\Drivers\lcd.c	536;"	l	line:536
-temp	D:\git\testing79m\Singcom\Drivers\lcd.c	740;"	l	line:740
+temp	D:\git\testing79m\Singcom\Drivers\lcd.c	1081;"	l	line:1081
+temp	D:\git\testing79m\Singcom\Drivers\lcd.c	1175;"	l	line:1175
+temp	D:\git\testing79m\Singcom\Drivers\lcd.c	1207;"	l	line:1207
+temp	D:\git\testing79m\Singcom\Drivers\lcd.c	1286;"	l	line:1286
+temp	D:\git\testing79m\Singcom\Drivers\lcd.c	1337;"	l	line:1337
+temp	D:\git\testing79m\Singcom\Drivers\lcd.c	1541;"	l	line:1541
 temp	D:\git\testing79m\Singcom\Drivers\oled_c1.c	139;"	l	line:139
 temp	D:\git\testing79m\Singcom\Drivers\oled_c1.c	160;"	l	line:160
 temp	D:\git\testing79m\Singcom\Drivers\oled_c1.c	30;"	l	line:30
 temp	D:\git\testing79m\Singcom\Drivers\oled_c1.c	71;"	l	line:71
 temp	D:\git\testing79m\Singcom\Drivers\oled_c1.c	99;"	l	line:99
-temp1	D:\git\testing79m\Singcom\Drivers\lcd.c	485;"	l	line:485
+temp1	D:\git\testing79m\Singcom\Drivers\lcd.c	1286;"	l	line:1286
 temp1	D:\git\testing79m\Singcom\Drivers\oled_c1.c	160;"	l	line:160
 tempBYTE	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	423;"	l	line:423
 tempBYTE	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	463;"	l	line:463
@@ -5766,8 +5745,8 @@ tempDNS	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	118;"	m	line:118	file:
 tempDNS2	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	119;"	m	line:119	file:
 tempDWORD	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	164;"	l	line:164
 tempDWORD	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	233;"	l	line:233
-tempDWORD	D:\git\testing79m\Main\Main.c	397;"	l	line:397
-tempDWORD	D:\git\testing79m\Main\Main.c	589;"	l	line:589
+tempDWORD	D:\git\testing79m\Singcom\Drivers\lcd.c	289;"	l	line:289
+tempDWORD	D:\git\testing79m\Singcom\Drivers\lcd.c	97;"	l	line:97
 tempData	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2293;"	l	line:2293
 tempData	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2626;"	l	line:2626
 tempData	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2674;"	l	line:2674
@@ -5775,7 +5754,7 @@ tempData	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2726;"	l	line:2726
 tempData	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2772;"	l	line:2772
 tempData	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	967;"	l	line:967
 tempGateway	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	115;"	m	line:115	file:
-tempH	D:\git\testing79m\Singcom\Drivers\lcd.c	280;"	l	line:280
+tempH	D:\git\testing79m\Singcom\Drivers\lcd.c	1081;"	l	line:1081
 tempHNode	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2294;"	l	line:2294
 tempIPAddress	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	114;"	m	line:114	file:
 tempIndex	D:\git\testing79m\App\SNMP\SNMPApp.c	505;"	l	line:505
@@ -5790,27 +5769,27 @@ tempLen	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2932;"	l	line:2932
 tempLen	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	901;"	l	line:901
 tempLocalIP	D:\git\testing79m\Microchip\TCPIP Stack\StackTsk.c	208;"	l	line:208
 tempMask	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	116;"	m	line:116	file:
-tempMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	564;"	l	line:564
+tempMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	1365;"	l	line:1365
 tempNonRepeators	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	1044;"	l	line:1044
 tempRef	D:\git\testing79m\App\SNMP\SNMPLLiBUCOp.c	63;"	l	line:63
 tempSavedOID	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	2285;"	l	line:2285
 tempServerID	D:\git\testing79m\Microchip\TCPIP Stack\DHCP.c	742;"	l	line:742
-tempSize	D:\git\testing79m\Singcom\Drivers\lcd.c	564;"	l	line:564
-tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	345;"	l	line:345
-tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	410;"	l	line:410
-tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	487;"	l	line:487
-tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	572;"	l	line:572
-tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	741;"	l	line:741
-tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	89;"	l	line:89
+tempSize	D:\git\testing79m\Singcom\Drivers\lcd.c	1365;"	l	line:1365
+tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	1146;"	l	line:1146
+tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	1211;"	l	line:1211
+tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	1288;"	l	line:1288
+tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	1373;"	l	line:1373
+tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	1542;"	l	line:1542
+tempString	D:\git\testing79m\Singcom\Drivers\lcd.c	890;"	l	line:890
 tempVal	D:\git\testing79m\App\SNMP\SNMPLLiBUCOp.c	63;"	l	line:63
 tempVal	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	3240;"	l	line:3240
-tempValue	D:\git\testing79m\Singcom\Drivers\lcd.c	569;"	l	line:569
-tempValue1	D:\git\testing79m\Singcom\Drivers\lcd.c	570;"	l	line:570
-tempValue2	D:\git\testing79m\Singcom\Drivers\lcd.c	571;"	l	line:571
+tempValue	D:\git\testing79m\Singcom\Drivers\lcd.c	1370;"	l	line:1370
+tempValue1	D:\git\testing79m\Singcom\Drivers\lcd.c	1371;"	l	line:1371
+tempValue2	D:\git\testing79m\Singcom\Drivers\lcd.c	1372;"	l	line:1372
 tempWORD	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	301;"	l	line:301
 tempWORD	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	364;"	l	line:364
-tempWORD	D:\git\testing79m\Main\Main.c	398;"	l	line:398
-tempWORD	D:\git\testing79m\Main\Main.c	590;"	l	line:590
+tempWORD	D:\git\testing79m\Singcom\Drivers\lcd.c	290;"	l	line:290
+tempWORD	D:\git\testing79m\Singcom\Drivers\lcd.c	98;"	l	line:98
 temp_ID	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	950;"	l	line:950
 temp_data	D:\git\testing79m\Drivers\External-Peripherals\devadc.c	119;"	l	line:119
 temp_data	D:\git\testing79m\Drivers\External-Peripherals\devadc.c	158;"	l	line:158
@@ -5836,7 +5815,7 @@ templvl	D:\git\testing79m\Main\Global.h	249;"	m	line:249	struct:deviceAlarm
 templvl_sspa	D:\git\testing79m\Main\Global.h	251;"	m	line:251	struct:deviceAlarm
 tempoff_sspa	D:\git\testing79m\Main\Global.h	253;"	m	line:253	struct:deviceAlarm
 tempvalue	D:\git\testing79m\SysLib\util.c	14;"	v	line:14
-tiDisplay_tmr	D:\git\testing79m\Singcom\Drivers\lcd.c	408;"	l	line:408	file:
+tiDisplay_tmr	D:\git\testing79m\Singcom\Drivers\lcd.c	1209;"	l	line:1209	file:
 timeStamp	D:\git\testing79m\App\SNMP\SNMPApp.c	686;"	l	line:686
 timestamp	D:\git\testing79m\Microchip\Include\TCPIP Stack\MPFS2.h	110;"	m	line:110
 timestamp	D:\git\testing79m\Microchip\TCPIP Stack\SNMP.c	257;"	m	line:257	file:
@@ -5878,7 +5857,7 @@ u16Temp	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	428;"	l	line:428
 u16Temp	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	469;"	l	line:469
 u16Temp	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	516;"	l	line:516
 u16Temp	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	558;"	l	line:558
-u16TempWord	D:\git\testing79m\Main\Main.c	788;"	l	line:788
+u16TempWord	D:\git\testing79m\Singcom\Drivers\lcd.c	488;"	l	line:488
 u32Freq	D:\git\testing79m\Singcom\Drivers\oled_c1.h	81;"	m	line:81
 u32InputFreq	D:\git\testing79m\Main\Global.h	24;"	m	line:24
 u32NewWordHigh	D:\git\testing79m\SysLib\util.c	40;"	l	line:40
@@ -5913,19 +5892,20 @@ u8DigitNum	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	424;"	l	line:424
 u8DigitNum	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	464;"	l	line:464
 u8DigitNum	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	512;"	l	line:512
 u8DigitNum	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	554;"	l	line:554
-u8DownMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	27;"	m	line:27	file:
+u8DownMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	31;"	m	line:31	file:
 u8DownMenu	D:\git\testing79m\Singcom\Drivers\oled_c1.h	72;"	m	line:72
 u8EXTREF	D:\git\testing79m\Main\Global.h	48;"	m	line:48
 u8FracPos	D:\git\testing79m\SysLib\util.c	305;"	l	line:305
 u8Freq	D:\git\testing79m\Singcom\Drivers\oled_c1.h	82;"	m	line:82
 u8GainCompenAddr	D:\git\testing79m\Singcom\Drivers\oled_c1.h	147;"	m	line:147
-u8Index	D:\git\testing79m\Main\Main.c	1020;"	l	line:1020	file:
+u8Index	D:\git\testing79m\Singcom\Drivers\lcd.c	710;"	l	line:710	file:
+u8Index	D:\git\testing79m\Singcom\Drivers\lcd.c	738;"	l	line:738	file:
 u8LEDSetting	D:\git\testing79m\Singcom\Drivers\oled_c1.h	200;"	m	line:200
 u8LNB_DC_ONOFF	D:\git\testing79m\Main\Global.h	45;"	m	line:45
 u8LNB_DC_OVERCurrent	D:\git\testing79m\Main\Global.h	47;"	m	line:47
 u8LNB_REF_ONOFF	D:\git\testing79m\Main\Global.h	43;"	m	line:43
 u8Led	D:\git\testing79m\Main\Global.h	49;"	m	line:49
-u8LeftMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	25;"	m	line:25	file:
+u8LeftMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	29;"	m	line:29	file:
 u8LeftMenu	D:\git\testing79m\Singcom\Drivers\oled_c1.h	70;"	m	line:70
 u8Lock	D:\git\testing79m\Main\Global.h	17;"	m	line:17
 u8Lock	D:\git\testing79m\Main\Global.h	33;"	m	line:33
@@ -5939,7 +5919,7 @@ u8Pos	D:\git\testing79m\SysLib\util.c	215;"	l	line:215
 u8Pos	D:\git\testing79m\SysLib\util.c	249;"	l	line:249
 u8Pos	D:\git\testing79m\SysLib\util.c	303;"	l	line:303
 u8Pos	D:\git\testing79m\SysLib\util.c	68;"	l	line:68
-u8RightMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	24;"	m	line:24	file:
+u8RightMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	28;"	m	line:28	file:
 u8RightMenu	D:\git\testing79m\Singcom\Drivers\oled_c1.h	69;"	m	line:69
 u8Status	D:\git\testing79m\Singcom\Drivers\oled_c1.h	199;"	m	line:199
 u8StrLen	D:\git\testing79m\SysLib\util.c	104;"	l	line:104
@@ -5960,10 +5940,10 @@ u8TempByte	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	802;"	l	line:802
 u8TempByte	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	834;"	l	line:834
 u8TempByte	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	867;"	l	line:867
 u8TempByte	D:\git\testing79m\App\WebUI\HTTPGetDevInfo.c	884;"	l	line:884
-u8TempByte	D:\git\testing79m\Main\Main.c	399;"	l	line:399
-u8TempByte	D:\git\testing79m\Main\Main.c	591;"	l	line:591
-u8TempByte	D:\git\testing79m\Main\Main.c	787;"	l	line:787
-u8UpMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	26;"	m	line:26	file:
+u8TempByte	D:\git\testing79m\Singcom\Drivers\lcd.c	291;"	l	line:291
+u8TempByte	D:\git\testing79m\Singcom\Drivers\lcd.c	487;"	l	line:487
+u8TempByte	D:\git\testing79m\Singcom\Drivers\lcd.c	99;"	l	line:99
+u8UpMenu	D:\git\testing79m\Singcom\Drivers\lcd.c	30;"	m	line:30	file:
 u8UpMenu	D:\git\testing79m\Singcom\Drivers\oled_c1.h	71;"	m	line:71
 uart0init	D:\git\testing79m\Drivers\UARTISR.h	44;"	p	line:44	signature:(uartDBC_t*,BYTE)
 uart1init	D:\git\testing79m\Drivers\UARTISR.h	45;"	p	line:45	signature:(uartDBC_t*,BYTE )
@@ -6143,7 +6123,7 @@ webpassinfo	D:\git\testing79m\App\WebUI\HTTPApp.c	62;"	v	line:62
 webpassword	D:\git\testing79m\Main\Global.h	315;"	m	line:315	struct:webpassword_s
 webpassword_s	D:\git\testing79m\Main\Global.h	310;"	s	line:310
 webpassword_t	D:\git\testing79m\Main\Global.h	316;"	t	line:316
-withSign	D:\git\testing79m\Singcom\Drivers\lcd.c	830;"	l	line:830
+withSign	D:\git\testing79m\Singcom\Drivers\lcd.c	1631;"	l	line:1631
 word	D:\git\testing79m\Microchip\Include\GenericTypeDefs.h	144;"	m	line:144	union:_DWORD_VAL
 word	D:\git\testing79m\Microchip\Include\GenericTypeDefs.h	211;"	m	line:211	union:_QWORD_VAL
 word	D:\git\testing79m\Microchip\Include\TCPIP Stack\SNMP.h	123;"	m	line:123
