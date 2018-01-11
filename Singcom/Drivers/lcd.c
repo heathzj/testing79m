@@ -777,8 +777,8 @@ void UpdateDataMenuSys()
                 
               break;
               
-              case 4: //power
-                stConverter.DownCVT.u16SetPwr = MenuValue[i].Value;
+              case 5: //set power
+                stConverter.DownCVT.i16SetPwr = MenuValue[i].Value;
                 stI2CDCMsg.unAtten.u16Atten = stConverter.DownCVT.u16SetPwr;
                 DownCvt_vSendI2C();
               break;
@@ -846,36 +846,44 @@ void UpdateDataMenuSys()
                break;
                
                case  4: //power
-                     stConverter.DownCVT.u16SetPwr = MenuValue[i].Value;
+                    MenuValue[i].Value = stConverter.DownCVT.u16OutputPower;
                break;
                
                case  5: //set pwr
-               
+              	   MenuValue[i].Value = stConverter.DownCVT.u16SetPwr;
                break;
                
                case  6: //lo
-               
+               		MenuValue[i].Value = stConverter.DownCVT.u8Lock;
                break;   
 
                case  7: //attn
-               
+               		MenuValue[i].Value = stConverter.DownCVT.u16Atten;
                break;
                
                case  8: //alc
-               
+               		MenuValue[i].Value = stConverter.DownCVT.u8ALC;
                break;
                
                case  9: //rfonoff
-               
+               		MenuValue[i].Value = stConverter.DownCVT.u8Mute;
                break;
                
                case  10: //ref
-               
+               		MenuValue[i].Value = stConverter.stDC.u8EXTREF;
                break;                 
                
            }
            
            /* Whether LCD page refresh is required */
+		   if(ValueUpdateFlag)
+		   	{
+
+				PrintLCDWholePage();
+				ValueUpdateFlag = FALSE;
+
+
+		   	}
            
        }
        
