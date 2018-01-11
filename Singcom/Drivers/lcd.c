@@ -309,6 +309,8 @@ static BYTE SYS__u8UpdateDownConverter()
 		stConverter.DownCVT.u8AlarmStatus = 0;
 		stConverter.DownCVT.u8Lock = 0;
 
+		MenuValue[6].ToBeUpdated = TRUE;
+
 		if(((CurrentMenu == nLOSTATUS_MENU_B)  || (CurrentMenu == MENU1)) && (TRUE != EditMode))
 		{
             ValueUpdateFlag = TRUE;
@@ -325,6 +327,8 @@ static BYTE SYS__u8UpdateDownConverter()
 		stConverter.DownCVT.u8AlarmStatus = 1;
 		stConverter.DownCVT.u8Lock = 1;
 
+		MenuValue[6].ToBeUpdated = TRUE;
+		
 		if(((CurrentMenu == nLOSTATUS_MENU_B)  || (CurrentMenu == MENU1))&& (TRUE != EditMode))
         {
 			ValueUpdateFlag = TRUE;
@@ -353,6 +357,8 @@ static BYTE SYS__u8UpdateDownConverter()
 			strcpypgm2ram(sALCb,"ON ");
 		}
 
+		MenuValue[8].ToBeUpdated = TRUE;
+
 		if((CurrentMenu == nALC_MENU_B) && (TRUE != EditMode))
         {
 			ValueUpdateFlag = TRUE;
@@ -378,6 +384,8 @@ static BYTE SYS__u8UpdateDownConverter()
 			Main_vLEDRX(ON);
 		}
 
+		MenuValue[9].ToBeUpdated = TRUE;
+
 		if ((CurrentMenu == nMUTE_MENU_B) && (TRUE != EditMode))
 		{
             ValueUpdateFlag = TRUE;
@@ -398,6 +406,10 @@ static BYTE SYS__u8UpdateDownConverter()
 
 
 		sprintf(RFFreqString2,"%04ld.%03ldMHz",stConverter.DownCVT.u32InputFreq/1000,stConverter.DownCVT.u32InputFreq%1000 );	
+
+
+		MenuValue[3].ToBeUpdated = TRUE;
+
 		
         if(((CurrentMenu == nFREQ_MENU_B)  || (CurrentMenu == MENU1)) && (TRUE != EditMode))
         {
@@ -422,6 +434,9 @@ static BYTE SYS__u8UpdateDownConverter()
 				fAtten = stConverter.DownCVT.u16Atten /10.0f;
 		    
 				sprintf(AttenString2,"%02d.%1d dB",(int)fAtten,(int)(fAtten*10) %10 );	
+
+				MenuValue[7].ToBeUpdated = TRUE;
+
 				
 		        if((CurrentMenu == nATTN_MENU_B) && (TRUE != EditMode))
 		        {
@@ -445,6 +460,10 @@ static BYTE SYS__u8UpdateDownConverter()
 			stConverter.DownCVT.fSetPwr = fSetPwr;
 			
 			sprintf(sDNC_StPwr,"%+03d.%1d dBm",(int)fSetPwr,(int)(fSetPwr*10) %10 );	
+
+
+			MenuValue[5].ToBeUpdated = TRUE;
+
 
 			if((CurrentMenu == nSTPWR_MENU_B)&& (TRUE != EditMode))
 	        {
@@ -470,6 +489,9 @@ static BYTE SYS__u8UpdateDownConverter()
 
 
         sprintf(sDCPower,"%+03d dBm",stConverter.DownCVT.i16OutputPower);
+
+
+		MenuValue[4].ToBeUpdated = TRUE;
 
 		if(((CurrentMenu == nPOWER_MENU_B) || (CurrentMenu == MENU1))&& (TRUE != EditMode))
         {
